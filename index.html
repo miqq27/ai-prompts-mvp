@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI System Prompts & Models Browser</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤖 AI System Prompts & Models</h1>
+            <p class="subtitle">A comprehensive collection of system prompts from 30+ AI tools and platforms</p>
+        </header>
+
+        <div class="search-section">
+            <input 
+                type="text" 
+                id="searchInput" 
+                placeholder="Search prompts by tool name, category, or keyword..." 
+                class="search-input"
+            />
+            <div class="filter-chips">
+                <button class="filter-chip active" data-category="all">All</button>
+                <button class="filter-chip" data-category="Anthropic">Anthropic</button>
+                <button class="filter-chip" data-category="Google">Google</button>
+                <button class="filter-chip" data-category="OpenAI">OpenAI</button>
+                <button class="filter-chip" data-category="Code Assistants">Code Assistants</button>
+                <button class="filter-chip" data-category="Search">Search</button>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-number" id="totalPrompts">0</div>
+                <div class="stat-label">Total Prompts</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="totalTools">0</div>
+                <div class="stat-label">AI Tools</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="visiblePrompts">0</div>
+                <div class="stat-label">Showing</div>
+            </div>
+        </div>
+
+        <div id="promptsGrid" class="prompts-grid">
+            <!-- Prompts will be dynamically inserted here -->
+        </div>
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="modalTitle"></h2>
+                <div id="modalCategory" class="modal-category"></div>
+                <div id="modalContent" class="modal-body"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Based on <a href="https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools" target="_blank">x1xhlol/system-prompts-and-models-of-ai-tools</a></p>
+        <p>Open source under GNU GPL v3</p>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
